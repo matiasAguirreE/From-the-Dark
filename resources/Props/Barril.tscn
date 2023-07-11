@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://bn1h5rnqed6dl"]
+[gd_scene load_steps=3 format=3 uid="uid://bn1h5rnqed6dl"]
 
 [ext_resource type="PackedScene" uid="uid://7nld813pp41d" path="res://resources/Props/barril.glb" id="1_ewyb6"]
 
-[node name="Node3D" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_40haa"]
+size = Vector3(0.549053, 0.699792, 0.549374)
+
+[node name="Barril" type="Node3D"]
 
 [node name="barril" parent="." instance=ExtResource("1_ewyb6")]
 transform = Transform3D(0.272, 0, 0, 0, 0.272, 0, 0, 0, 0.272, 0, 0, 0)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00238072, 0)
+shape = SubResource("BoxShape3D_40haa")

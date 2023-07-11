@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://comruxpv4b3ad" path="res://scenes/control_scenes/Menu_pausa.tscn" id="3_k0o8a"]
 [ext_resource type="PackedScene" uid="uid://bes3apfcqe06e" path="res://scenes/control_scenes/Menu_gameover.tscn" id="4_kiuij"]
 [ext_resource type="QuadMesh" uid="uid://bh6ojfd6dr3qx" path="res://resources/pulse_mesh.tres" id="5_71klk"]
-[ext_resource type="Script" path="res://resources/pulse_controller.gd" id="6_5ihla"]
+[ext_resource type="Script" path="res://scenes/new_map_scenes/Ecolocalzación.gd" id="5_nj0y2"]
 [ext_resource type="AudioStream" uid="uid://b707rr1hpuu8l" path="res://audio/music/Confusion.mp3" id="7_y6abf"]
 [ext_resource type="Texture2D" uid="uid://x0ogodopx0rg" path="res://resources/textures/Concreto/Concrete1/concrete-tiles-diffuse.jpg" id="8_ellls"]
 [ext_resource type="Texture2D" uid="uid://ra16rmap2ru0" path="res://resources/textures/Concreto/Floor/textures/concrete_floor_02_rough_1k.jpg" id="8_ks83k"]
@@ -69,8 +69,7 @@ visible = false
 [node name="Ecolocalización" type="MeshInstance3D" parent="characters/player"]
 visible = false
 mesh = ExtResource("5_71klk")
-script = ExtResource("6_5ihla")
-_origin_point = NodePath("..")
+script = ExtResource("5_nj0y2")
 
 [node name="Buho" parent="characters" instance=ExtResource("11_g1hsm")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8.68725, 0.606149, -7.60139)

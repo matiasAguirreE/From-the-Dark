@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://xhqo2d6yi1wp"]
+[gd_scene load_steps=36 format=3 uid="uid://xhqo2d6yi1wp"]
 
 [ext_resource type="Texture2D" uid="uid://deq47rli6qimw" path="res://resources/textures/Concreto/Concrete1/concrete tiles-AO.jpg" id="1_b42x3"]
 [ext_resource type="Script" path="res://scenes/new_map_scenes/MapaNuevo.gd" id="1_wcg6v"]
@@ -6,8 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://yyx8ocrg77qm" path="res://resources/Props/Flecha2.glb" id="3_bt28u"]
 [ext_resource type="PackedScene" uid="uid://ya21rrd7oioh" path="res://models/characters/player/player.tscn" id="3_y75v5"]
 [ext_resource type="Shader" path="res://resources/pulse.gdshader" id="4_kk3e3"]
+[ext_resource type="PackedScene" uid="uid://bn1h5rnqed6dl" path="res://resources/Props/Barril.tscn" id="5_nhm23"]
 [ext_resource type="Script" path="res://scenes/new_map_scenes/Ecolocalzación.gd" id="5_t0sqn"]
 [ext_resource type="PackedScene" uid="uid://gp518k65kbn1" path="res://models/characters/buho/Buho.tscn" id="6_2it1t"]
+[ext_resource type="PackedScene" uid="uid://c61wsifl0is0d" path="res://resources/Props/lvl_l.tscn" id="6_jfcl0"]
 [ext_resource type="AudioStream" uid="uid://b707rr1hpuu8l" path="res://audio/music/Confusion.mp3" id="7_8jvsv"]
 [ext_resource type="PackedScene" uid="uid://comruxpv4b3ad" path="res://scenes/control_scenes/Menu_pausa.tscn" id="9_4qqt2"]
 [ext_resource type="PackedScene" uid="uid://bes3apfcqe06e" path="res://scenes/control_scenes/Menu_gameover.tscn" id="10_x0aay"]
@@ -70,6 +72,7 @@ size = Vector3(1, 3.58781, 3.05545)
 
 [sub_resource type="Environment" id="Environment_x3e4x"]
 ambient_light_source = 2
+ambient_light_color = Color(0.121569, 0.121569, 0.121569, 1)
 fog_enabled = true
 fog_light_color = Color(0.113725, 0.117647, 0.121569, 1)
 
@@ -140,7 +143,6 @@ transform = Transform3D(-1.74846e-08, -0.4, 1.74846e-08, 0, -1.74846e-08, -0.4, 
 
 [node name="Techo" type="CSGBox3D" parent="Mapa/Ceiling/Pasillo5"]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -31, 2, -11)
-visible = false
 material_override = SubResource("StandardMaterial3D_5ht1q")
 use_collision = true
 size = Vector3(18, 0, 2)
@@ -908,6 +910,63 @@ shape = SubResource("WorldBoundaryShape3D_q0pid")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Mapa/NavigationRegion3D/Ground/Enviro"]
 environment = SubResource("Environment_x3e4x")
+
+[node name="Objects" type="Node" parent="Mapa"]
+
+[node name="Barriles" type="Node" parent="Mapa/Objects"]
+
+[node name="Barril" parent="Mapa/Objects/Barriles" instance=ExtResource("5_nhm23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27947, 0.36304, -7.08671)
+
+[node name="Barril2" parent="Mapa/Objects/Barriles" instance=ExtResource("5_nhm23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.22531, 0.36304, -5.33541)
+
+[node name="Barril3" parent="Mapa/Objects/Barriles" instance=ExtResource("5_nhm23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.36607, 0.36304, -3.58169)
+
+[node name="Barril4" parent="Mapa/Objects/Barriles" instance=ExtResource("5_nhm23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.81966, 0.36304, -21.9935)
+
+[node name="Barril5" parent="Mapa/Objects/Barriles" instance=ExtResource("5_nhm23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.7441, 0.36304, -21.2037)
+
+[node name="Barril6" parent="Mapa/Objects/Barriles" instance=ExtResource("5_nhm23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2245, 0.36304, -22.0758)
+
+[node name="Barril7" parent="Mapa/Objects/Barriles" instance=ExtResource("5_nhm23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9346, 0.36304, -13.5223)
+
+[node name="Barril8" parent="Mapa/Objects/Barriles" instance=ExtResource("5_nhm23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5076, 0.36304, -15.5545)
+
+[node name="Barril9" parent="Mapa/Objects/Barriles" instance=ExtResource("5_nhm23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.9355, 0.36304, -12.7523)
+
+[node name="Tanques" type="Node" parent="Mapa/Objects"]
+
+[node name="Tank" parent="Mapa/Objects/Tanques" instance=ExtResource("6_jfcl0")]
+transform = Transform3D(0.747717, 0, -0.664018, 0, 1, 0, 0.664018, 0, 0.747717, -2.79417, 0.173429, -29.54)
+
+[node name="Tank2" parent="Mapa/Objects/Tanques" instance=ExtResource("6_jfcl0")]
+transform = Transform3D(0.747717, 0, -0.664018, 0, 1, 0, 0.664018, 0, 0.747717, -4.79376, 0.173429, -28.9354)
+
+[node name="Tank3" parent="Mapa/Objects/Tanques" instance=ExtResource("6_jfcl0")]
+transform = Transform3D(-0.0340099, 0, -0.999422, 0, 1, 0, 0.999422, 0, -0.0340099, -9.08808, 0.173429, -28.925)
+
+[node name="Tank4" parent="Mapa/Objects/Tanques" instance=ExtResource("6_jfcl0")]
+transform = Transform3D(-0.0340099, 0, -0.999422, 0, 1, 0, 0.999422, 0, -0.0340099, -10.9236, 0.173429, -28.9594)
+
+[node name="Tank5" parent="Mapa/Objects/Tanques" instance=ExtResource("6_jfcl0")]
+transform = Transform3D(-0.813101, 0, -0.582123, 0, 1, 0, 0.582123, 0, -0.813101, -27.1938, 0.173429, -19.1438)
+
+[node name="Tank6" parent="Mapa/Objects/Tanques" instance=ExtResource("6_jfcl0")]
+transform = Transform3D(-0.813101, 0, -0.582123, 0, 1, 0, 0.582123, 0, -0.813101, -27.1929, 0.173429, -17.3682)
+
+[node name="Tank7" parent="Mapa/Objects/Tanques" instance=ExtResource("6_jfcl0")]
+transform = Transform3D(-0.813101, 0, -0.582123, 0, 1, 0, 0.582123, 0, -0.813101, -24.7812, 0.173429, -19.6642)
+
+[node name="Tank8" parent="Mapa/Objects/Tanques" instance=ExtResource("6_jfcl0")]
+transform = Transform3D(-0.813101, 0, -0.582123, 0, 1, 0, 0.582123, 0, -0.813101, -24.6578, 0.173429, -17.9214)
 
 [node name="Characters" type="Node" parent="."]
 

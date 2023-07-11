@@ -8,7 +8,7 @@ extends Node3D
 @onready var owlscream= $Characters/Buho/Scream
 @onready var owlhaul= $Characters/Buho/Haul
 @onready var screech= $Screech
-@onready var wincondition= $Mapa/NavigationRegion3D/Walls/HabitacionFinal/WinCondition
+@onready var wincondition= $Mapa/NavigationRegion3D/Walls/HabitacionFinal/Area3D/WinCondition
 
 func _physics_process(_delta):
 	pass #get_tree().call_group("enemies", "update_target_location", player.global_transform.origin)
