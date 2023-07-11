@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://coaoa0mq2gmva"]
+
+[node name="Credits" type="MarginContainer"]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2

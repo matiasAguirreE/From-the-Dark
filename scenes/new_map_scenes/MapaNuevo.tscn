@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://xhqo2d6yi1wp"]
+[gd_scene load_steps=34 format=3 uid="uid://xhqo2d6yi1wp"]
 
 [ext_resource type="Texture2D" uid="uid://deq47rli6qimw" path="res://resources/textures/Concreto/Concrete1/concrete tiles-AO.jpg" id="1_b42x3"]
 [ext_resource type="Script" path="res://scenes/new_map_scenes/MapaNuevo.gd" id="1_wcg6v"]
@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://b707rr1hpuu8l" path="res://audio/music/Confusion.mp3" id="7_8jvsv"]
 [ext_resource type="PackedScene" uid="uid://comruxpv4b3ad" path="res://scenes/control_scenes/Menu_pausa.tscn" id="9_4qqt2"]
 [ext_resource type="PackedScene" uid="uid://bes3apfcqe06e" path="res://scenes/control_scenes/Menu_gameover.tscn" id="10_x0aay"]
+[ext_resource type="AudioStream" uid="uid://b1m7xol8r21e2" path="res://audio/sounds/Bat Screech.mp3" id="12_vamso"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7s0hp"]
 albedo_texture = ExtResource("1_b42x3")
@@ -945,6 +946,11 @@ light_color = Color(0.960784, 0.368627, 0.337255, 1)
 [node name="Main_Theme" type="AudioStreamPlayer" parent="Música"]
 stream = ExtResource("7_8jvsv")
 autoplay = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Música"]
+
+[node name="Screech" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_vamso")
 
 [connection signal="body_entered" from="Mapa/NavigationRegion3D/Walls/HabitacionFinal/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="attacking" from="Characters/Buho" to="." method="_on_buho_attacking"]

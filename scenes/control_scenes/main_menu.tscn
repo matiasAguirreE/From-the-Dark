@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://djxr82a7vkwhl"]
+[gd_scene load_steps=8 format=3 uid="uid://djxr82a7vkwhl"]
 
 [ext_resource type="Script" path="res://scenes/control_scenes/MarginContainer.gd" id="1_ur5o8"]
 [ext_resource type="FontFile" uid="uid://bpep5j6x7abay" path="res://fonts/ghastly_panic/Ghastly Panic.ttf" id="2_epd5f"]
@@ -11,6 +11,8 @@ Label/fonts/font = ExtResource("2_epd5f")
 [sub_resource type="Theme" id="Theme_uy888"]
 default_font_size = 64
 Button/fonts/font = ExtResource("2_epd5f")
+
+[sub_resource type="Theme" id="Theme_i7dhu"]
 
 [sub_resource type="Theme" id="Theme_rpb6s"]
 default_font_size = 64
@@ -58,6 +60,15 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme = SubResource("Theme_uy888")
 text = "Start"
+
+[node name="Credits" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_i7dhu")
+theme_override_fonts/font = ExtResource("2_epd5f")
+theme_override_font_sizes/font_size = 60
+text = "Credits"
 
 [node name="Quit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
