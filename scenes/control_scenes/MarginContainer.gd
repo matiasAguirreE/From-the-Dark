@@ -19,7 +19,7 @@ extends MarginContainer
 ## Undefined.
 func _ready():
 	start.pressed.connect(_on_start_presssed)
-	credits.pressed.connect(_on_credits_presssed)
+	credits.pressed.connect(_on_credits_pressed)
 	quit.pressed.connect(_on_quit_presssed)
 ## Undefined.
 func _on_start_presssed():
@@ -27,8 +27,8 @@ func _on_start_presssed():
 	get_tree().change_scene_to_file("res://scenes/new_map_scenes/MapaNuevo.tscn")
 	get_tree().paused = false
 ## Undefined.
-func _on_credits_presssed():
-	get_tree().change_scene_to_file("res://scenes/new_map_scenes/MapaNuevo.tscn")
+func _on_credits_pressed():
+	get_tree().change_scene_to_file("res://scenes/control_scenes/credits.tscn")
 ## Undefined.
 func _on_quit_presssed():
 	get_tree().quit()

@@ -1,8 +1,35 @@
-[gd_scene format=3 uid="uid://coaoa0mq2gmva"]
+[gd_scene load_steps=2 format=3 uid="uid://coaoa0mq2gmva"]
+
+[ext_resource type="Script" path="res://scenes/control_scenes/credits.gd" id="1_jv5jw"]
 
 [node name="Credits" type="MarginContainer"]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_right = 1152.0
+offset_bottom = 646.0
+script = ExtResource("1_jv5jw")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "This project was made as a college project. We thank and give credits 
+to everyone who has made this work posible:
+
+Animation and Models of Characters - Matías Aguirre
+Map Creation - Cristian Conejeros
+Audio and Art Director - Ignacio Parada
+Programing - Alfredo Waugh
+
+Special thanks to:
+Echolocalization Shader - Michael Watt, Inigo Quilez and Christopher Marín
+Owls Sound - Cornell Lab of Ornithology (Youtube)
+Textures - Rassukas (CGtrader)"
+
+[node name="Back" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Back"
