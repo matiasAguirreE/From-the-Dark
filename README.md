@@ -9,11 +9,10 @@
 5. [Controls](#controls)
 6. [Screenshots or Demo](#screenshots-or-demo)
 7. [Development Process](#development-process)
-8. [Known Issues and Troubleshooting](#known-issues-and-troubleshooting)
-9. [Contributing](#contributing)
-10. [Team Members](#team-members)
-11. [License](#license)
-12. [Acknowledgments](#acknowledgments)
+8. [Contributing](#contributing)
+9. [Team Members](#team-members)
+10. [License](#license)
+11. [Acknowledgments](#acknowledgments)
 
 ## Introduction
 
@@ -41,9 +40,10 @@ To play From the Dark, follow these steps:
 
 ## Controls
 
-- Movement: arrow keys.
-- Echolocation: F key.
-- Hang/Detach from Ceiling: D key.
+- Movement: WASD keys.
+- Flight: Spacebar.
+- Echolocation: Left mouse click.
+- Hang/Detach from Ceiling: Right mouse click.
 - Pause: Esc key.
 
 ## Screenshots or Demo
@@ -53,10 +53,6 @@ For more screenshots and a gameplay demo, please visit the [official website](ht
 ## Development Process
 
 From the Dark was developed by a dedicated team of engineering students at the Universidad de Chile. Throughout the development process, we utilized some game development technologies, such as Godot and Blender. We are proud to present the result of our hard work and passion.
-
-## Known Issues and Troubleshooting
-
-- In process.
 
 ## Contributing
 
